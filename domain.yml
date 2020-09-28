@@ -1,0 +1,53 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- busca
+- goodbye
+- start
+- greet
+- obrigado
+- menu
+- states
+- none
+entities:
+- states
+- today
+- week
+slots:
+  slot_city:
+    type: text
+  states_slots:
+    type: text
+responses:
+  utter_cidade:
+  - text: Qual cidade você gostaria de receber as informações, porfavor envie no seguinte
+      formato (cidade - uf)
+  utter_format_city:
+  - text: Por favor informe a cidade e o estado no seguinte formato (cidade - uf)
+  utter_menu:
+  - buttons:
+    - payload: Para hoje
+      title: Para hoje
+    - payload: Para semana
+      title: Para semana
+    text: Qual informação você gostaria de saber, previsão do tempo para hoje ou para
+      semana?
+  utter_obrigado:
+  - text: Que nada é um prazer ajudar :)
+  utter_sair:
+  - text: Obrigado por utilizar o PredictTimeBot, tenha um bom dia :) Caso queria
+      saber a previsão do tempo para outra cidade é só conversar comigo. Até mais.
+  utter_week_or_day:
+  - text: Você gostaria de saber a previsão do tempo da semana ou do dia?
+actions:
+- action_anything_else
+- action_fallback
+- action_farewell
+- action_find_city
+- action_greet
+- action_predict_time_today
+- action_predict_time_week
+- utter_cidade
+- utter_format_city
+- utter_week_or_day
