@@ -29,3 +29,4 @@ Para executar o chatbot, antes é necessário seguir esses passos:
 
  - Após isso, no mesmo terminal execute o comando `rasa run actions` para executar o servidor de ações do RASA;
  - Em outro terminal paralelo, execute o comando `rasa train && rasa shell` para treinar e testar o bot no terminal.
+ - Para montar as stories, realize o comando `rasa interactive`, para mapear cada intent e entity das frases, e serve para ajustar se estiver com algum detalhe faltando na intent.
